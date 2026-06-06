@@ -6,7 +6,7 @@ test.describe('Login — Data Driven', () => {
 
   // Runs once for EACH user in the validUsers array
   for (const user of validUsers) {
-    test(`valid login: ${user.description}`, async ({ page }) => {
+    test(`valid login: ${user.description} @regression`, async ({ page }) => {
       const loginPage = new LoginPage(page);
 
       await loginPage.goto();
@@ -17,7 +17,7 @@ test.describe('Login — Data Driven', () => {
   }
 
   for (const user of invalidUsers) {
-    test(`invalid login: ${user.description}`, async ({ page }) => {
+    test(`invalid login: ${user.description} @regression`, async ({ page }) => {
       const loginPage = new LoginPage(page);
 
       await loginPage.goto();

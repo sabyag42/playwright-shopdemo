@@ -13,7 +13,7 @@ test.describe('Checkout Process', () => {
     await expect(page).toHaveURL('/inventory.html');
   });
 
-  test('user can complete checkout', async ({ page }) => {
+  test('user can complete checkout @smoke @regression', async ({ page }) => {
     const inventoryPage = new InventoryPage(page);
     const cartPage      = new CartPage(page);
     const checkoutPage  = new CheckoutPage(page);

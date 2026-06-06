@@ -12,7 +12,7 @@ test.describe('Cart', () => {
     await expect(page).toHaveURL('/inventory.html');
   });
 
-  test('user can add a product to cart', async ({ page }) => {
+  test('user can add a product to cart @smoke @regression', async ({ page }) => {
     const inventoryPage = new InventoryPage(page);
     const cartPage      = new CartPage(page);
 
@@ -26,7 +26,7 @@ test.describe('Cart', () => {
     expect(items).toContain('Sauce Labs Backpack');
   });
 
-  test('user can remove a product from cart', async ({ page }) => {
+  test('user can remove a product from cart @smoke @regression', async ({ page }) => {
     const inventoryPage = new InventoryPage(page);
     const cartPage      = new CartPage(page);
 
